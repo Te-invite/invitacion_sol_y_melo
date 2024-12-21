@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+@font-face {
+    font-family: 'Loreal Shilone';
+    src: url('./assets/font/Loreal_Shilone_Serif.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'NeueMachina Regular';
+    src: url('./assets/font/NeueMachina-Regular.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Joland Colline';
+    src: url('./assets/font/joland-colline.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'NeueMachina-Ultrabold';
+    src: url('./assets/font/NeueMachina-Ultrabold.otf') format('opentype');
+  }
+:root{
+    --color-body:#FFF8F1;
+
+    --font-primary-color:#A47764;
+
+    --font-secondary:#838383; 
+    --font-secondary-dark:#3F3F3F;
+    --font-secondary-medium:#4B4B4A;
+
+    --font-title:'Loreal Shilone', sans-serif;
+    --font-subtitle: 'Playfair', serif;
+    --font-btn:'NeueMachina Regular';
+    --font-btn-bold:"NeueMachina-Ultrabold";
+    --font-title-section: 'Joland Colline';
+
+    --color_font_btn:#B3806F;
+    --line_btn:#E3E3E3;
+    --line-timer:#E6E6E6;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    height:100vh;
+    overflow-x: hidden;
+  }
+.custom_btn_invitacion{
+  background: transparent;
+    font-size: 12px;
+    font-family: var(--font-btn);
+    color: var(--font-secondary-dark);
+    border: 1px solid var(--font-secondary-dark);
+}  
+.custom_btn_invitacion:hover{
+  color: var(--font-secondary-dark);
+    border: 1px solid var(--font-secondary-dark);
+}
