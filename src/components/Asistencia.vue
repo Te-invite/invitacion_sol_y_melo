@@ -32,17 +32,13 @@ export default {
             </span>
             <span class="ceremonia_recepcion">
                 <strong>
-                    <p class="text_asistencia">
-                    Ceremonia: 
-                    </p>
+                    <p class="text_asistencia">Ceremonia:</p>
                 </strong> 
                 <p class="text_asistencia">{{ ceremonia }}</p>
             </span>
             <span class="ceremonia_recepcion">
                 <strong>
-                    <p class="text_asistencia">
-                    Recepción: 
-                    </p>
+                    <p class="text_asistencia">Recepción:</p>
                 </strong> 
                 <p class="text_asistencia">{{ recepcion }}</p>
             </span>
@@ -91,6 +87,7 @@ export default {
     text-align: center;
     font-size: 14px;
     margin-bottom: 0.2rem;
+    text-indent: 0.25em; 
 }
 
 .custom_btn_asistencia {
@@ -140,13 +137,16 @@ export default {
     }
     .asistencia_content {
         width: 100%;
-        height: 200px;
+        height: 230px;
     }
     .asistencia_subtitle {
         font-size:1.2rem;
     }
     .text_asistencia {
         font-size:1.2rem;
+    }
+    .fecha_confirmacion {
+        font-size: .7rem;
     }
 }
 </style>

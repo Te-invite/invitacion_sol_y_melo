@@ -84,7 +84,10 @@ export default {
                     placeholder=""/>
             </div>
             <div class="form-group mb-3 selector" >
-                <label for="numMembers" class="form-label">Cantidad de invitados (sin hijos):</label>
+                <label for="numMembers" class="form-label">
+                    <p class="form-label">Cantidad de invitados</p>
+                    <p class="form-label">(sin hijos)</p>
+                </label>
                 <select id="numMembers" name="numMembers" class="form-select" aria-label="Default select example" v-model="numMembers">
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -125,10 +128,9 @@ export default {
     font-size:14px;
     font-family: var(--font-btn);
     color:var(--font-secondary-dark);
-    line-height:100%;
+    line-height:115%;
     text-align:center;
     margin-bottom:.3rem;
-    letter-spacing: 2px;
 }
 .box_text_area{
     width:80%;
@@ -163,7 +165,7 @@ export default {
     margin-bottom:0;
 }
 .selector{
-    width:85%;
+    width:74%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,6 +222,36 @@ export default {
     .container_planta{
         bottom:-7%;
     }
+    .form-control::placeholder{
+        font-size:.8rem;
+    }
+    .planta_botom{
+        width:150px;
+        height:150px;
+        clip-path: inset(0px 0px 50px 0px);   
+    }
+    .form-select{
+        height:40px;
+        width:70px;
+        border-radius: 20px;
+    }
+    .form-label{
+        font-size:1rem;
+    }
+    .input_nombre{
+        width: 80%;
+    }
+    .form-label{
+        font-size:1rem;
+    }
+    .container_planta{
+        bottom:-7%;
+    }
+    .planta_botom{
+        width:150px;
+        height:150px;
+        clip-path: inset(0px 0px 50px 0px);   
+    }
 }
 
 @media (min-width: 1025px) {
@@ -230,12 +262,15 @@ export default {
         font-size:1.5rem;
     }
     .container_planta{
-        bottom:-13%;
+        bottom:-12%;
     }
     .planta_botom{
         width:200px;
         height:200px;
         clip-path: inset(0px 0px 70px 0px);   
+    }
+    .form-control::placeholder{
+        font-size:1rem;
     }
 
 }

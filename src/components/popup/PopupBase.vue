@@ -161,7 +161,7 @@ export default {
     }
     .pop-up-body{
         width:100%;
-        height:380px;
+        height:auto;
     
     }
     .title {
