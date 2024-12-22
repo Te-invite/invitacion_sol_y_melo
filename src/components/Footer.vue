@@ -33,7 +33,6 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border:1px solid blue;
 }
 .section_invitation{
     width:100%;
@@ -47,7 +46,6 @@ export default {
     margin-top:.5rem;
     width: 108px;
     height: auto;
-    border:1px solid red;
 }
 .banner_bottom{
     width: 100%;
@@ -83,37 +81,21 @@ text_2{
 @media (min-width: 768px) and (max-width: 991px) {
     .footer{
         width:100%;
-        height:250px;
-    }
-    .option{
-        width:400px;
-    }
-    .opcion{
-        font-size:1.2rem;
-    }
-    .curva{
-        width: 100%;
-        height: 200px;
+        height:160px;
     }
     .img_logo{
-        margin-top:80px;
         width: 200px;
         height: auto;
+        margin-top:1rem;
     }
 }
 @media (min-width: 1024px) {
     .footer{
         width:100%;
-        height:auto;
-    }
-    .curva{
-        width: 100%;
-        height: 250px;
-        margin-bottom:90px;
+        height:150px;
     }
     .img_logo{
-        margin-top:90px;
-        width: 150px;
+        width: 220px;
         height: auto;
     }
 }

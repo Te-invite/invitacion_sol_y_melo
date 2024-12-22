@@ -14,7 +14,7 @@ export default {
 }
 </script>
 <template>
-    <div class="home_portada">
+    <div class="home_portada" data-aos="fade-up">
         <div class="home_title">
             <h1 class="inicial letra1">{{ inicial1 }}</h1>
             <img :src="planta" alt="ornamento" class="img1">

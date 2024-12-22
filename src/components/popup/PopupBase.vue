@@ -98,7 +98,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items:center ;
-    border:1px solid red;
+
 }
 
 .title {
@@ -107,10 +107,11 @@ export default {
     font-weight: 500;
     color: var(--font-primary-color);
     text-align: center;
-    line-height: 80%;
+    line-height: 110%;
     position:relative;
+    margin-top:1rem;
     z-index: 2;
-    border:1px solid red;
+
 }
 .pop-up-footer{
     width:100%;
@@ -120,14 +121,15 @@ export default {
 }
 @media(max-width:320px) {
     .pop-up-body{
+
         height:550px;
     }
 }
 
 @media(max-width:360px) {
     .pop-up-inner{
-        width: 100%;
-        height:530px;
+        width: 90%;
+        height:auto;
     }
     .pop-up-body{
         height:90%;
@@ -140,19 +142,30 @@ export default {
 @media (min-width: 768px) and (max-width: 991px) {
     .pop-up-inner{
         width: 50%;
-        height:400px;
+        height:auto;
+        
     }
     .title {
-        font-size:3rem;
+        font-size:90px;
+    }
+    .pop-up-body{
+        height:80%;
+        
     }
 }
 
 @media (min-width: 1025px) {
     .pop-up-inner{
-        width: 30%;
+        width: 50%;
+        height:auto;
     }
     .pop-up-body{
         width:100%;
+        height:380px;
+    
+    }
+    .title {
+        font-size:120px;
     }
 }
 </style>

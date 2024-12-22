@@ -30,7 +30,7 @@ export default {
                     window.open("https://maps.app.goo.gl/RVNysZz6pGnucmy19");
                 } else if (result.dismiss === Swal.DismissReason.cancel) {
                     // Si el usuario presiona "Cancelar", cierra el popup de SweetAlert
-                    this.openMap();
+                    Swal.close();
                 }
             });
         }
@@ -39,14 +39,14 @@ export default {
 }
 </script>
 <template>
-    <div class="lugar_container">
+    <div  class="lugar_container" id="lugar" data-aos="fade-up">
         <TitleSection title="Lugar"/>
         <span class="lugar_txt">
             <h3 class="lugar_title">{{ text }}</h3>
             <p class="lugar_text">{{text2}}</p>
         </span>
         <Boton label="¿CÓMO LLEGAR?" customClass="btn-mayor custom_btn_invitacion" @click="redirectToSheet()"/>
-        <img :src="ornamento2" alt="">
+        <img :src="ornamento2" class="planta_lugar" alt="">
     </div>
 </template>
 <style>
@@ -57,14 +57,12 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border:1px solid red;
 }
 .lugar_txt{
     width:200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:1px solid red;
 }
 .lugar_title{
     font-size: 14px;
@@ -78,5 +76,36 @@ export default {
     font-family: var(--font-btn);
     font-weight: normal;
     text-align: center;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .lugar_title{
+        font-size: 1rem;
+    }
+    .lugar_txt{
+        width:300px;
+    }
+    .lugar_text{
+        font-size: 14px;
+    }
+    .planta_lugar{
+        width: 162px;
+        height: 162px;
+    }
+}
+@media (min-width: 1024px) {
+    .lugar_txt{
+        width:450px;
+    }
+    .lugar_title{
+        font-size: 1.5rem;
+    }
+    .lugar_text{
+        font-size: 1.2rem;
+    }
+    .planta_lugar{
+        margin-top:1rem;
+        width: 182px;
+        height: 182px;
+    }
 }
 </style>

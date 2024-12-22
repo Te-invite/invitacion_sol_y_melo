@@ -30,7 +30,7 @@ export default {
     <div class="invitacion_container">
         <div class="invitacion_body">
             <PortadaInvitacion/>
-            <img :src="linea_fina" class="separador" alt="linea">
+            <img :src="linea_fina" class="separador" data-aos="fade-left" alt="linea">
             <Timer/>
             <Asistencia/>
             <Lugar/>
@@ -38,8 +38,8 @@ export default {
             <Regalo/>
             <div class="option">
                 <a href="#dias" class="opcion" @click.prevent="scrollTo('#dias')">Confirmar Asistencia |</a>
-                <a href="#horario" class="opcion" @click.prevent="scrollTo('#horario')">¿Cómo llegar? |</a>
                 <a href="#lugar" class="opcion" @click.prevent="scrollTo('#lugar')">Dresscode</a>
+                <a href="#dress" class="opcion" @click.prevent="scrollTo('#dress')">¿Cómo llegar? |</a>
             </div>
         </div>
         <Footer></Footer>
@@ -54,6 +54,7 @@ export default {
     flex-direction: column;
     justify-content:center;
     align-items: center;
+    overflow-x:hidden ;
 }
 
 .invitacion_body {
@@ -64,12 +65,12 @@ export default {
     background: var(--color-body);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
 }
 .separador{
-    margin:0 0;
+    margin:0;
 }
 .option{
     margin-top:1rem;
@@ -88,11 +89,46 @@ export default {
     color:var(--color_font_btn);
     text-decoration: none;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+    .invitacion_container {
+        width: 100%;
+        height: 100%;
+    }
+    .invitacion_body {
+        width: 85%;
+        height: 100%;
+    }
+    .option{
+        margin-top:3.5rem;
+        width:70%;
+    }
+    .opcion{
+        font-size:1rem;
+    }
+    .separador{
+        width:100vw;
+        height:50%;
+    }
+}
 @media (min-width: 1024px) {
     .invitacion_body {
         width: 95%;
         height: 100%;
         margin: 32px 0;
+    }
+    .separador{
+        width:100vw;
+    }
+    .invitacion_body {
+        width: 85%;
+        height: 100%;
+    }
+    .option{
+        margin-top:1rem;
+        width:60%;
+    }
+    .opcion{
+        font-size:1rem;
     }
 }
 </style>

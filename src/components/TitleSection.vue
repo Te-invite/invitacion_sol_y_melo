@@ -11,13 +11,12 @@ export default {
 }
 </script>
 <template>
-    <div class="container_title">
+    <div class="container_title" data-aos="fade-right">
         <h1 class="titleSection" >{{ title }}</h1>
     </div>
 </template>
 <style>
 .container_title {
-    border:1px solid orangered;
     width: 100%;
     height: 60px;
     display: flex;
@@ -36,22 +35,23 @@ export default {
 @media (min-width: 768px) and (max-width: 991px) {
     .container_title {
         width: 100%;
-        height: 250px;
+        height: 80px;
+        margin-top:1.5rem;
     }
 
     .titleSection {
-        font-size: 4rem;
+        font-size: 90px;
     }
 }
 
 @media (min-width: 1025px) {
     .container_title {
         width: 100%;
-        height: 200px;
+        height: 140px;
     }
 
     .titleSection {
-        font-size: 5.5rem;
+        font-size: 140px;
     }
 }
 </style>

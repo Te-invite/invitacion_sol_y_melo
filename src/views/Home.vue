@@ -19,7 +19,7 @@ export default {
         <div class="home_body">
             <div class="home_content">
                 <Portada />
-                <div class="home_btn">
+                <div class="home_btn" data-aos="fade-down">
                     <Boton label="INGRESAR" customClass="btn-mayor custom_btn" @click="enter()" />
                 </div>
             </div>

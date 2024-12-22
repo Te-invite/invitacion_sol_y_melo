@@ -11,7 +11,7 @@ export default {
 }
 </script>
 <template>
-    <div class="dress_container">
+    <div class="dress_container" id="dress" data-aos="fade-up-left">
         <TitleSection title="Dresscode"/>   
         <span class="dresscode_txt">
             <p class="text_asistencia">{{ text }}</p>
@@ -32,4 +32,5 @@ export default {
     display: flex;
     align-items: center;
 }
+
 </style>

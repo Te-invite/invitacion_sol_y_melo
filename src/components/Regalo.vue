@@ -1,16 +1,28 @@
 <script>
 import TitleSection from './TitleSection.vue';
+import PopBancario from './popup/PopBancario.vue';
 import Boton from './Boton.vue';
 export default {
     name:'Regalo',
-    components:{TitleSection, Boton}
+    components:{TitleSection, Boton, PopBancario},
+    data(){
+       return{
+        popup:false
+       } 
+    },
+    methods: {
+        togglePopUpBank(){
+            this.popup = !this.popup
+        }        
+    }
 }
 </script>
 <template>
     <div class="regalos_container">
         <TitleSection title="Regalos"/>   
         <div class="regalo_boton">
-            <Boton label="DATOS BANCARIOS" customClass="btn-mayor custom_btn_asistencia" />
+            <PopBancario v-show="popup" @close="togglePopUpBank()"/>
+            <Boton label="DATOS BANCARIOS" customClass="btn-mayor custom_btn_invitacion" @click="togglePopUpBank()" />
         </div>
     </div>
 </template>
@@ -18,13 +30,11 @@ export default {
 .regalos_container{
     width:100%;
     height:110px;
-    border:1px solid red;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
 .regalo_boton{
-    border:1px solid red;
     width: 100%;
     height: 50px;
     display: flex;
@@ -32,5 +42,11 @@ export default {
     justify-content: center;
     align-items: center;
     margin: 0;
+}
+@media (min-width: 1024px) {
+    .regalos_container{
+        width:100%;
+        height:200px;
+    }
 }
 </style>

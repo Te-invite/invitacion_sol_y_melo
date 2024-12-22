@@ -13,10 +13,10 @@ export default {
 </script>
 
 <template>
-    <div id="dias" class="section__timer" >
+    <div id="dias" class="section__timer" data-aos="fade-up">
         <div class="countdown">
             <!--Cargar fecha-->
-            <Counter :year="2025" :month="3" :date="1" :hour="17" :minute="0" :second="0" :millisecond="31" />
+            <Counter :year="2025" :month="3" :date="1" :hour="18" :minute="0" :second="0" :millisecond="31" />
         </div>
         <div class="ornamento">
             <img :src="ornamento2"  class="planta" alt="">
@@ -45,15 +45,22 @@ export default {
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .section__timer{
-    width:100%;  
-     
-}
+        width:100%;   
+    }
+    .ornamento > .planta{
+        width: 162px;
+        height: 162px;
+    }
 }
 
 @media (min-width: 1024px) {
     .countdown{
         width: 100%;
         height:auto;
+    }
+    .ornamento > .planta{
+        width: 182px;
+        height: 182px;
     }
 }
 </style>

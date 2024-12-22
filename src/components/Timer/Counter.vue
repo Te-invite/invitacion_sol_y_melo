@@ -112,6 +112,11 @@ export default {
 </template>
 
 <style scoped>
+.counter__txt{
+    font-size: 60px;
+    font-family: var(--font-title-section);
+    color:var( --font-primary-color);
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -122,120 +127,72 @@ export default {
 }
 
 .counter__container {
-    display: flex;
+    display:flex;
+    flex-direction: row;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    height:auto;
+    width:100%;
+    height: 100px;
 }
 .container_hora{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
-    width: 250px;
-    height: auto;
-}
-
-.counter__txt { /*title*/
-    font-size: 60px;
-    text-align: center;
-    color: var(--title-timer);
-    font-family: var(--font-title-section);
-    line-height: 100%;
-    margin-bottom:1rem;
-}
-.counter__content {
-    /*... */
-    width:70px;
+    gap: auto;
+    width: 240px;
     height:auto;
+}
+.counter__content{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.dia > h1,
-.hora >h1,
-.minuto>h1,
-.segundos>h1{
-    color:var(--font-primary-color);
-    font-family: var(--font-btn);
-    font-weight: lighter;
-    font-size: 1.5rem;
+.counter__content > h1{
+    font-size:1.5rem;
+    font-family:var(--font-btn-light);
+    color:var( --font-primary-color);
 }
-.counter__label {
-    color: #3F3F3F;
- text-align: center;
- font-family: var(--font-btn);
- font-size: .8rem;
- font-style: normal;
- font-weight: 400;
- line-height: normal;
+.counter__label{
+    font-size:.5rem;
+    font-family:var(--font-btn);
+    color:var(--font-secondary-dark);
+
 }
 .dia,
 .hora,
 .minuto{
-    border-right:1px solid var(--line-timer); 
+    border-right: 1px solid var(--line-timer);
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .container {
-        width: 100%;
-        height: 100%;
+    .container_hora{
+        width:300px;
     }
-    .counter__container {
-        width: 600px;
-        height:auto;
+    .counter__txt{
+        font-size: 90px;
     }
-    .counter__txt { 
-        font-size: 1.5rem;
-        
+    .counter__content > h1{
+        font-size:2rem;
     }
-    .counter__content {
-        width:130px;
-        height:100%;
-        margin-left: 1rem;
-    }
-    .dia > h1,
-    .hora >h1,
-    .minuto>h1,
-    .segundos>h1{
-        font-size: 60px;
-    }
-    .counter__label {
-        font-size: .9rem;
+    .counter__label{
+        font-size:.8rem;
     }
 
 }
 
 @media (min-width: 1025px) {
-    .container {
-        width: 100%;
-        height: 100%;
+    .counter__txt{
+        font-size: 140px;
     }
-    .counter__container {
-        width: 800px;
-        height:auto;
-    }
-    .counter__txt { 
-        font-size: 2rem;
-        
-    }
-    .counter__content {
+    .container_hora{
         width:350px;
-        height:100%;
-        margin-left: 1rem;
     }
-    .dia > h1,
-    .hora >h1,
-    .minuto>h1,
-    .segundos>h1{
-        font-size: 80px;
-        padding: 0 1rem;
+    .counter__content > h1{
+        font-size:2.5rem;
     }
-    .counter__label {
-        font-size: 1rem;
+    .counter__label{
+        font-size:1rem;
     }
+
 }
 </style>
